@@ -1,10 +1,9 @@
 import connectDB from './config/db.js';
 import kirimPromosi from './autopost.js';
 import { Client } from 'discord.js-selfbot-v13';
-import 'dotenv/config';
 const client = new Client();
 
-connectDB(); 
+connectDB();
 
 client.on('ready', () => {
   console.log(`🔓 Login sebagai ${client.user.tag}`);
@@ -12,4 +11,4 @@ client.on('ready', () => {
   setInterval(() => kirimPromosi(client), 5 * 1000); 
 });
 
-client.login(process.env.DISCORD_TOKEN);
+client.login('NzI1ODA1Mjk0NzU5ODM3NzM2.GajJhD.HjebLvweHct7t8TKPGQr3QZjTMM8kos0ry83n4');
